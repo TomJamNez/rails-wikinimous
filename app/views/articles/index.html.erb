@@ -1,0 +1,13 @@
+<%= link_to "create article", articles_new_path%>
+
+<div class="container">
+
+<% @articles.each do |article| %>
+  <article class="mb-3">
+    <%= link_to article.title, article_path(article) %>
+    <% trim = article.content.lines.first%>
+    <%=trim = trim[0...-4] + "..."%>
+    </article>
+    </div>
+  <% end %>
+</div>
